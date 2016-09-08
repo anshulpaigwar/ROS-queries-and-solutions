@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ubuntu Newbie guide by anshulpaigwar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Ubuntu Newbie guide</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/anshulpaigwar/ROS-queries-and-solutions" class="btn">View on GitHub</a>
+      <a href="https://github.com/anshulpaigwar/ROS-queries-and-solutions/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/anshulpaigwar/ROS-queries-and-solutions/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="configuring-ubuntu-for-a-better-user-experience" class="anchor" href="#configuring-ubuntu-for-a-better-user-experience" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Configuring ubuntu for a better user experience:</h1>
+
+<h2>
+<a id="here-are-few-things-you-should-follow-while-installing-ubuntu" class="anchor" href="#here-are-few-things-you-should-follow-while-installing-ubuntu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Here are few things you should follow while installing ubuntu:</h2>
+
+<ol>
+<li>If you are a newbie and installing ubuntu for the first time I recommend you do some background study to avoid any issues. Watch few videos on installion process example:<a href="https://www.youtube.com/watch?v=hOz66FC0pWU">video_1</a> <a href="https://www.youtube.com/watch?v=mOtMOws7GJg">video_2</a> <a href="https://www.youtube.com/watch?v=K6CXT7spLxg">video_3</a>.</li>
+<li>While creating partition during ubuntu installation process important things are to keep swap_area twice the size as your ram and I would also recommend you to manually allocate space for root(/) and home directories (/home). 20 Gb is enough for root (the place where ubuntu is installed and all your libraries reside here ) but you should allocate more space to home (the place where all your media files exist).</li>
+<li>If you are new to Linux file system I'll recommend you should read these:<a href="http://askubuntu.com/questions/138547/how-to-understand-the-ubuntu-file-system-layout">link-1</a> <a href="https://www.quora.com/What-is-the-purpose-of-each-folder-in-the-root-of-an-Ubuntu-installation">link-2</a>.</li>
+<li>If you are new to ubuntu command line I'll recommend you to go through <a href="https://help.ubuntu.com/community/UsingTheTerminal">this</a> tutorial.</li>
+</ol>
+
+<h2>
+<a id="following-things-are-my-personal-recommendations-are-optional-but-these-things-would-surely-make-your-life-easy" class="anchor" href="#following-things-are-my-personal-recommendations-are-optional-but-these-things-would-surely-make-your-life-easy" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Following things are my personal recommendations are optional but these things would surely make your life easy:</h2>
+
+<h3>
+<a id="extremely-handy-tool-incremental-history-searching" class="anchor" href="#extremely-handy-tool-incremental-history-searching" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Extremely handy tool:: Incremental history searching:</h3>
+
+<p>In terminal enter:</p>
+
+<pre><code>gedit  ~/.inputrc
+</code></pre>
+
+<p>Then copy paste and save:</p>
+
+<pre><code>"\e[A": history-search-backward
+"\e[B": history-search-forward
+"\e[C": forward-char
+"\e[D": backward-char
+</code></pre>
+
+<p>From now on, and many agree this is the most useful terminal tool, it saves you a lot of writing/memorizing...</p>
+
+<p>All you need to do to find a previous command is to enter say the first two or three letters and upward arrow will take you there quickly:</p>
+
+<p>Say I want:</p>
+
+<pre><code>for f in *.mid ; do timidity "$f"; done
+</code></pre>
+
+<p>All I need to do is enter:</p>
+
+<pre><code>fo
+</code></pre>
+
+<p>And hit upward arrow command will soon appear.</p>
+
+<h3>
+<a id="extremely-handy-tool-scroll-click-to-paste" class="anchor" href="#extremely-handy-tool-scroll-click-to-paste" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Extremely handy tool:: scroll click to paste:</h3>
+
+<p>Whenever you select any text in ubuntu it automatically gets stored in your clipboard (separate one from Ctrl+c) and it stays there till you select another text. You can use scroll click to paste it wherever you want and as many time you want.</p>
+
+<p>Just select any command(text) from your browser, open terminal and press scroll-click in terminal...Voila! you pasted in terminal. It is useful while installing software and you have to copy and paste lots of commands. <strong>So always use mouse with ubuntu.</strong></p>
+
+<p>For more info check this <a href="http://askubuntu.com/questions/167570/how-does-middle-click-paste-work">link</a></p>
+
+<h3>
+<a id="useful-softwares-to-install" class="anchor" href="#useful-softwares-to-install" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Useful Softwares to install:</h3>
+
+<p>Go to software center and install following:</p>
+
+<ul>
+<li>Chromium browser (definitely the best browser)</li>
+<li>Synaptic Package manager (very useful to check broken packages and repair them)</li>
+<li>VLC player (yeah supports all kind of video and music file)</li>
+<li>Record my desktop (very handy tool to record screen results of your project)</li>
+<li>Geany (very lightweight and easy to use IDE for all your codes). Also, install Geany plugins to increase its functionalities(debugger, Version control, Markdown editor, ADD-ONs). Then install Geany themes to change the editor colour to black(reduces strain on eyes).</li>
+<li>UGet (IDM for ubuntu)</li>
+<li>Foxit_reader for pdfs. If you read lot of research paper Foxit supports annotations and text highlighting. (similar to adobe reader) Foxit reader is not available on software center but you can get it from its official website.</li>
+</ul>
+
+<hr>
+
+<h1>
+<a id="useful-ubuntu-commands-to-remember" class="anchor" href="#useful-ubuntu-commands-to-remember" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Useful Ubuntu Commands to remember:</h1>
+
+<h2>
+<a id="remove-directory-contents" class="anchor" href="#remove-directory-contents" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Remove directory contents:</h2>
+
+<p>To remove the folder with all its contents(including all interior folders):</p>
+
+<p><code>rm -rf /path/to/directory</code></p>
+
+<p>To remove all the contents of the folder(including all interior folders) but not the folder itself:</p>
+
+<p><code>rm -rf /path/to/directory/*</code></p>
+
+<p>To remove all the "files" from inside a folder(not removing interior folders):</p>
+
+<p><code>rm -f /path/to/directory/*</code></p>
+
+<p>rm - stands for "remove"</p>
+
+<p>-f - stands for "force" which is helpful when you don't want to be asked/prompted if you want to remove an archive, for example.</p>
+
+<p>-r - stands for "recursive" which means that you want to go recursively down every folder and remove everything.</p>
+
+<h2>
+<a id="copy-all-content-from-one-directory-to-another" class="anchor" href="#copy-all-content-from-one-directory-to-another" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Copy all content from one directory to another:</h2>
+
+<p>You can copy the content of a folder /source to another existing folder /dest with the command</p>
+
+<p><code>cp -a /source/. /dest/</code></p>
+
+<hr>
+
+<h1>
+<a id="installations-in-ubuntu" class="anchor" href="#installations-in-ubuntu" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installations in ubuntu:</h1>
+
+<p>This is something very important that most of the people don't understand and just blindly copy paste the commands from websites to install Softwares and libraries in ubuntu.
+The easy installation process and linking of libraries actually make ubuntu superior to Windows and hence is the preferred choice of developers.</p>
+
+<p>Well, there are two different type of installation using <strong>Pre-built Binaries</strong> or installation from <strong>source</strong>. You can find a detailed comparison between them <a href="http://unix.stackexchange.com/questions/152346/what-is-the-difference-between-building-from-source-and-using-an-install-package">here</a>.</p>
+
+<h2>
+<a id="installation-using-prebuilt-binaries" class="anchor" href="#installation-using-prebuilt-binaries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation using prebuilt binaries:</h2>
+
+<p>All software are programs, which are also called source packages. So all source packages need to be built first, to run on your system.
+The binary packages are one that are already build from source by someone with general features and parameters provided in the software so that a large number of users can install and use it.</p>
+
+<h3>
+<a id="1-apt" class="anchor" href="#1-apt" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. APT:</h3>
+
+<p>APT (the Advanced Packaging Tool) is an evolution of the Debian .deb software packaging system. It is a rapid, practical, and efficient way to install packages on your system. Dependencies are managed automatically, configuration files are maintained, and upgrades and downgrades are handled carefully to ensure system stability.</p>
+
+<p>Basically, it's the official command line tool provided and managed by team Ubuntu to help you install Softwares.</p>
+
+<p><strong>So what Softwares can I install through APT??</strong></p>
+
+<p>The of Softwares you can install using APT are limited. The list of Softwares/libraries are managed by team Ubuntu are chosen after rigorous testing that they won't affect your system stability. You can find the list by using following command:</p>
+
+<pre><code>$ apt-cache pkgnames
+</code></pre>
+
+<p>The list is stored in apt cache offline and you can search them. But you need internet connection to install them.</p>
+
+<p><code>$ sudo apt-get update</code> updates the apt cache list and version of Softwares you can install.</p>
+
+<p><code>$ sudo apt-get install pkgnames</code> command downloads packages from ubuntu servers and installs them.</p>
+
+<p><code>$ sudo apt-get upgrade</code> command actually compares the version of all the packages that are installed in your system with the version in apt cache and upgrades them if they are at the lower version.</p>
+
+<p>I highly recommend you to go through these tutorials fo a better understanding: <a href="http://www.computerhope.com/unix/apt-get.htm">link-1</a>, <a href="http://www.tecmint.com/useful-basic-commands-of-apt-get-and-apt-cache-for-package-management/">link-2</a>.</p>
+
+<p>Binary packages are ones which have been made specifically for one type of computer, or architecture. Ubuntu supports the x86 (i386 or i686), AMD64 and PPC architectures. By using APT correct binary packages will be used automatically, so you don't have to worry about picking the right ones. </p>
+
+<h3>
+<a id="2-software-center" class="anchor" href="#2-software-center" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Software center:</h3>
+
+<p>Software center is official GUI tool by team Ubuntu an alternative to APT command line tool for those who do not want to install software using command line. So you can search and install every damn library from software center that you can also do with APT.</p>
+
+<h3>
+<a id="3-aptitude" class="anchor" href="#3-aptitude" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>3. aptitude:</h3>
+
+<p>Aptitude is another command line tool for installation and managing packages similar to apt-get with many added functionalities such as handling dependencies issues more smartly than apt-get. </p>
+
+<h3>
+<a id="4-synaptic-package-manager" class="anchor" href="#4-synaptic-package-manager" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>4. Synaptic Package manager:</h3>
+
+<p>It is another GUI tool to install and manage your packages similar to software center but with some added functionalities such as finding and repairing broken packages.</p>
+
+<h3>
+<a id="5-debian-packages" class="anchor" href="#5-debian-packages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>5. Debian Packages:</h3>
+
+<p><strong>What if you want to install a software that is not available in apt-cache??</strong></p>
+
+<p>Surely team Ubuntu cannot go through testing of all the available packages and hence there are limited number of packages in apt-cache. So developers whose packages could not it make to apt-cache use Debian package format(.deb) to pack their software for easy distribution and installation. Debian is standard UNIX archive. You can download .deb files from the websites of developers.</p>
+
+<p><strong>dpkg</strong> is a low-level system tool to extract, analyze, unpack and install or remove .deb files.</p>
+
+<p><code>$ sudo dpkg -i pkgname.deb</code> command installs the package.</p>
+
+<p>For more information please go through <a href="http://www.thegeekstuff.com/2010/06/install-remove-deb-package/?utm_source=feedburner&amp;utm_medium=feed&amp;utm_campaign=Feed%3A+TheGeekStuff+(The+Geek+Stuff)">this</a> tutorial.</p>
+
+<p>All the above mentioned package mangers are advanced interfaces to the Debian packaging system.</p>
+
+<p><strong>Key point:</strong> The package installed directly using dpkg in not managed by apt-get i.e if a new version of the package is available it will not be upgraded using <code>$ sudo apt-get upgrade</code> unless you add it to your apt repository. A detailed description about this can be found <a href="http://askubuntu.com/questions/430756/can-i-manage-dpkg-installed-package-with-apt-get">here</a>.</p>
+
+<h2>
+<a id="installation-from-source" class="anchor" href="#installation-from-source" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation from Source:</h2>
+
+<p>Unlike pre-built binaries the Source packages are not pre compiled So for installing from source, you need to build the source code yourself. That means you need to take care of the dependencies yourself. Also you need to be aware of all the features of the package so that you can build it accordingly. Advantages of installing form from source are:</p>
+
+<ul>
+<li>You can install the latest version and can always stay updated!</li>
+<li>Install it in a location you wish.</li>
+</ul>
+
+<p>The source code for software on Linux comes in the form of compressed tar files, which typically have either .tar.gz or .tar.bz2 extensions. Download the tar files of packages you wanna install and extract them using following command:</p>
+
+<pre><code>$ tar -xvfz &lt;name of tarball with .tar.gz extension&gt;
+(or)
+$ tar -xvfj &lt;name of tarball with tar.bz2 extension&gt;
+</code></pre>
+
+<p><strong>Always read the Readme file provided with the package before installation.</strong> Readme file generally have valuable information about package dependencies and the steps for compillation and installation of the packages. Usually developers use makefile system to help you build and install the package. Steps involved are as follows:</p>
+
+<p><code>$ cd pkgname</code> get inside the extracted pkg directory</p>
+
+<p><code>$ ./configure</code> This command executes the configuration file which generates makefile according to the information in the file. You can edit configuration file to compile the source code according to your requirement. You may also find that makefile in the package already exist then this process would become unnecessary.</p>
+
+<p><code>$ make</code> command compiles the source code.</p>
+
+<p><code>$ make install</code> command installs the package into your system.</p>
+
+<p>For more detailed information on how to install from source please see these tutorials: <a href="http://www.thegeekstuff.com/2012/06/install-from-source/">link-1</a>, 
+<a href="http://www.howtogeek.com/105413/how-to-compile-and-install-from-source-on-ubuntu/">Link-2</a>.</p>
+
+<h1>
+<a id="compile-build-and-run-code" class="anchor" href="#compile-build-and-run-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compile, Build and Run Code!</h1>
+
+<p>To make a successfully working peice of software you must understand all the process involed to run your code:</p>
+
+<h2>
+<a id="build-vs-compile" class="anchor" href="#build-vs-compile" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Build vs compile:</h2>
+
+<ul>
+<li><p><strong>Compiling</strong> is the process of converting the high level code to machine level code (object code).</p></li>
+<li><p><strong>Linking</strong> is the act of combining object code with libraries into a raw executable.</p></li>
+<li><p><strong>Building</strong> is the process of converting the high level language to a executable. It would involve compiling and linking. Many compilers handle the linking step automatically after compiling source code.</p></li>
+</ul>
+
+<p>There is no use in compiling alone as it does not produce the final excutable and hence you need to build always.</p>
+
+<h2>
+<a id="compiler" class="anchor" href="#compiler" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compiler:</h2>
+
+<p>A compiler is a computer program (or a set of programs) that transforms source code written in a programming language (the source language) into another computer language (the target language), with the latter often having a binary form known as object code.The most common reason for converting source code is to create an executable program.</p>
+
+<p><img src="https://github.com/anshulpaigwar/ROS-queries-and-solutions/blob/master/traditionalCompiler.png" alt="Compiler"></p>
+
+<h2>
+<a id="ideintegrated-development-environment" class="anchor" href="#ideintegrated-development-environment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>IDE(Integrated Development Environment):</h2>
+
+<p>An integrated development environment (IDE) is a software suite that consolidates the basic tools developers need to write and test software. Typically, an IDE contains a code editor, a compiler or interpreter and a debugger that the developer accesses through a single graphical user interface (GUI). Modern IDEs also have intelligent code completion and various other addons. Examples: <strong>Geany</strong>, Eclipse, NetBeans, Dev-C++, Codeblocks...</p>
+
+<h2>
+<a id="gcc-g-and-gcc" class="anchor" href="#gcc-g-and-gcc" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GCC, g++ and gcc:</h2>
+
+<ul>
+<li><p>GCC: GNU Compiler Collection, Referrers to all the different languages that are supported by the GNU compiler.</p></li>
+<li><p>gcc: GNU C Compiler. gcc will compile: .c/.cpp files as C and C++ respectively.</p></li>
+<li><p>g++: GNU C++ Compiler. g++ will compile: .c/.cpp files but they will all be treated as C++ files.</p></li>
+</ul>
+
+<p>In simple words gcc and g++ are peice of software that converts c++ source code into executables through sequence of process compiling, linking and building. IDEs are simple graphical user interfaces that uses g++/gcc compiler to build your code. But you don't need an IDE to compile your code using g++/gcc you can do it through command lines in your terminal!</p>
+
+<p>To compile your c++ code, use:</p>
+
+<p><code>$ g++ foo.c -o bar</code></p>
+
+<p>foo.c in the example is the name of the program to be compiled. This will produce an executable in the same directory called bar.out ( -o bar specifies the name of the output file) which you can run by typing this in your terminal:</p>
+
+<p><code>$ ./bar.out</code></p>
+
+<h2>
+<a id="make-and-cmake" class="anchor" href="#make-and-cmake" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Make and CMake:</h2>
+
+<p><strong>FAQ:</strong> We have got IDEs to build my source code. IDEs are very simple to use and have loads of features so what the heck Make and CMake are?? why they are even in existence??</p>
+
+<p><strong>ANS:</strong> Consider you are working on a big project comprises a lot of different files. Now you would have to build all the files everytime. Each file might require linking to different libraries. Keeping track of various dependencies while building each file one by one using IDE is practically very difficult.</p>
+
+<p>Make and CMake are build automation tools that automatically builds executable programs and libraries from source code by reading files called Makefiles and CmakeLists repectively which specify how to derive the target program.</p>
+
+<p>In easy words when working with large number of files you can create a simple list of (names/path) all the different files you want to build and their corresponding dependencies. Then you can use softwares like Make and CMake those read this list and builds all the listed source codes one by one using the given instructions. This means you now just have to call Make/CMake command in your package and everything will get automatically build.</p>
+
+<p>For more detailed description about Make and CMake please follow this <a href="https://prateekvjoshi.com/2014/02/01/cmake-vs-make/">link</a></p>
+
+<ul>
+<li><p><strong>Make:</strong> Uses "makefile" to get knowledge of how to build the source code. The reason we need “Make” is because it enables the end user to build and install your package without knowing the details of how it’s done.</p></li>
+<li><p><strong>CMake:</strong> CMake stands for Cross-platform Make. It uses CMakeLists.txt file instead of makefile. For CMake, there are two steps: First, you need to setup your build environment. This creates a makefile or something equivalent depending upon the OS/platform you are using(linux or windows). Second, you perform the actual build in the selected build system.
+So CMake is better than Make!</p></li>
+</ul>
+
+<h3>
+<a id="installation-using-make" class="anchor" href="#installation-using-make" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation using Make:</h3>
+
+<p><code>$ ./configure</code> checks if you have all the required dependencies and creates the Makefile.</p>
+
+<p><code>$ make</code> compiles the software using the rules of the Makefile.</p>
+
+<p><code>$ make install</code> moves the software to the correct location in the filesystem.</p>
+
+<h3>
+<a id="installation-using-cmake" class="anchor" href="#installation-using-cmake" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation using CMake:</h3>
+
+<p>Download and untar the package and check if it has CMakeLists.txt file in it. If yes then go inside the directory of downloaded package and follow these steps:</p>
+
+<p><code>$ mkdir build</code> make a new folder name "build" for the files generated after building your package.</p>
+
+<p><code>$ cd build</code> change directory to build folder.</p>
+
+<p><code>$ cmake ..</code> This commands tells CMake to build all the file in current directory using the source code in previous directory. ".." specifies to previous directory.</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/anshulpaigwar/ROS-queries-and-solutions">Ubuntu Newbie guide</a> is maintained by <a href="https://github.com/anshulpaigwar">anshulpaigwar</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
